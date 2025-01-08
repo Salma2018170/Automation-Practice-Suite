@@ -11,8 +11,11 @@ public class SearchPage {
     WebDriver driver;
     //Locators initialization
 
+
+    //span[contains(@class, 'searchbox_suggestionText')]/span[.=" tutorial"]/span
+
     By seleniumDevLink = By.xpath("//a[@data-testid='result-extras-url-link' and @href='https://www.selenium.dev/documentation/webdriver/']");
-    By testNGTutorialText = By.xpath("");
+
     //constructor
 
     public SearchPage(WebDriver driver){
@@ -27,8 +30,5 @@ public class SearchPage {
         assertEquals(WebElementActions.getElementText(driver,seleniumDevLink),expectedResult);
     }
 
-    public  void assertOnTestNGTutorial(String expectedResult){
-        System.out.println("The fourth link is: "+driver.findElement(testNGTutorialText).getText());
-        assertEquals(WebElementActions.getElementText(driver,testNGTutorialText),expectedResult);
-    }
+
 }

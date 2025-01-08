@@ -19,7 +19,7 @@ public class WaitingStrategies {
 
     //Duration.ofSeconds(2) is a constant value
 
-    private final Duration DURATION = Duration.ofSeconds(30);
+    private final Duration DURATION = Duration.ofSeconds(2);
 
     //Wait initialization
    private Wait<WebDriver> wait;
@@ -27,6 +27,8 @@ public class WaitingStrategies {
     //LOCATOR
     By addBoxButton = By.xpath("//input[@id='adder']");
     By box = By.xpath("//div[@id='box0']");
+
+    By box1 = By.id("box0");
 
 
     // Print the retrieved color for debugging purposes
@@ -75,6 +77,7 @@ public class WaitingStrategies {
 
         wait = new WebDriverWait(driver,DURATION);
         wait.until(d -> driver.findElement(box).isDisplayed());
+                //.isDisplayed());
         ///////////////
         String backgroundColor= driver.findElement(box).getCssValue("background-color");
         System.out.println("Background color: " + backgroundColor);
@@ -89,7 +92,7 @@ public class WaitingStrategies {
          wait =
                 new FluentWait<>(driver)
                         .withTimeout(DURATION)
-                        .pollingEvery(Duration.ofMillis(300))
+                        .pollingEvery(Duration.ofMillis(300)) //kol 2day hro7 abos 3la browser
                         .ignoring(NoSuchElementException.class)
                         .ignoring(ElementNotInteractableException.class);
 
@@ -102,6 +105,21 @@ public class WaitingStrategies {
         System.out.println("Background color: " + backgroundColor);
         String expectedColor = "rgba(255, 0, 0, 1)";
         assertEquals(backgroundColor, expectedColor);
+    }
+
+    @Test
+    public void bestPracticeNote1(){
+        //option1
+        By addBoxButton = By.xpath("//input[@id='adder']");
+        driver.findElement(addBoxButton).click();
+        //option2 very recommended to use NOT cause stale element exception (minimize the risk of stale element exception)
+        driver.findElement(By.xpath("//input[@id='adder']")).click();
+        //option3 cause stale element exception and not recommended to use
+        WebElement element=driver.findElement(addBoxButton);
+        element.click();
+
+
+
     }
 
     @AfterMethod

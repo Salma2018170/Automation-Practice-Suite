@@ -19,7 +19,8 @@ public class TestCases {
     //Pages initialization
     private DuckduckgoHomePage duckduckgoHomePage;
     private SearchPage searchPage;
-
+//URL
+    String url="https://www.w3schools.com/html/html_tables.asp";
     //data
     String expectedTitle="Google";
     String expectedtSeleniumDevText="https://www.selenium.dev › documentation › webdriver";
@@ -30,7 +31,8 @@ public class TestCases {
         ConfigReader.loadProperties();
         driver= WebBrowserFactory.getDriver();
         //driver=new ChromeDriver();
-        driver.get("https://duckduckgo.com/");
+        //driver.get("https://duckduckgo.com/");
+        driver.navigate().to(url);
 
         //Pages initialization
         duckduckgoHomePage =new DuckduckgoHomePage(driver);
@@ -58,7 +60,8 @@ public class TestCases {
     @Description("Search for Selenium WebDriver Task3")
     @Test
     public void searchForSelenium(){
-        duckduckgoHomePage.searchOnDuckduckgo("Selenium WebDriver");
+        duckduckgoHomePage.setSearchBox("Selenium WebDriver");
+        duckduckgoHomePage.clickOnSearchIcon();
         //need to wait for the search result to be displayed
         //Also we need to handle the wait in a better way
         //Need to handle data in a better way
@@ -70,10 +73,19 @@ public class TestCases {
     @Description("Search for testNG Task4")
     @Test
     public void searchForTestNG(){
-        duckduckgoHomePage.searchOnDuckduckgo("TestNG");
-        //need to wait for the search result to be displayed
-        //Also we need to handle the wait in a better way
-        //Need to handle data in a better way
+        duckduckgoHomePage.setSearchBox("TestNG");
+        duckduckgoHomePage.assertOnTestNGTutorial("TestNG ");
+
+    }
+//    Open Google Chrome
+//    Navigate to [https://www.w3schools.com/html/html_tables.asp]
+//    Assert that the Country for the Company [Ernst Handel] is [Austria]
+//    Close Google Chrome
+
+    @Description("assert for company Task7")
+    @Test
+    public void assertForTheCountryTask7(){
+   ///Page loadstratiges
 
     }
 
