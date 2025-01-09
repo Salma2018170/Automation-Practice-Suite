@@ -1,4 +1,4 @@
-package testPakage;
+package duckduckgo.testcases;
 
 import jdk.jfr.Description;
 import org.openqa.selenium.WebDriver;
@@ -82,12 +82,7 @@ public class TestCases {
 //    Assert that the Country for the Company [Ernst Handel] is [Austria]
 //    Close Google Chrome
 
-    @Description("assert for company Task7")
-    @Test
-    public void assertForTheCountryTask7(){
-   ///Page loadstratiges
 
-    }
 
     @AfterMethod
     public void tearDown(){
