@@ -12,7 +12,7 @@ public class W3schoolsPage {
 
     private WebDriver driver;
     // Waiting
-    private final Duration DURATION = Duration.ofSeconds(2);
+    private final Duration DURATION = Duration.ofSeconds(20);
 
     //Wait initialization
     private Wait<WebDriver> wait;

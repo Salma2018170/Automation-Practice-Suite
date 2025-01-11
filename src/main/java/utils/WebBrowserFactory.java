@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class WebBrowserFactory {
 
-// !!!!! I want to trace this method to see why default value is not used
+// !!!!! I want to trace this method to see why default value is not used (IT'S WORKING)
     public static WebDriver getDriver() {
         String browser = ConfigReader.getProperty("browser", "chrome");
         WebDriver driver = null;

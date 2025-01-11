@@ -21,6 +21,7 @@ public class ConfigReader {
 
 
     /**
+     *this method is used to get browser name from config.properties file
      *
      * @param key the key to search for in the properties file
      * @param defaultValue the value to return if the key is not found

@@ -12,10 +12,10 @@ public class SearchPage {
     //Locators initialization
 
 
-    //span[contains(@class, 'searchbox_suggestionText')]/span[.=" tutorial"]/span
 
     By seleniumDevLink = By.xpath("//a[@data-testid='result-extras-url-link' and @href='https://www.selenium.dev/documentation/webdriver/']");
 
+    By fourthResultText=By.xpath("//li[@data-layout='organic'][4]//a[@data-testid='result-title-a']");
     //constructor
 
     public SearchPage(WebDriver driver){
@@ -28,6 +28,10 @@ public class SearchPage {
     public  void assertOnSeleniumDevFirstLink(String expectedResult){
         System.out.println("The first link is: "+driver.findElement(seleniumDevLink).getText());
         assertEquals(WebElementActions.getElementText(driver,seleniumDevLink),expectedResult);
+    }
+
+    public  String getTextOfTheFourthResult ( ){
+     return driver.findElement(fourthResultText).getText();
     }
 
 
