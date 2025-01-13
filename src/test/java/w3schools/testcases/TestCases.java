@@ -8,9 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.ConfigReader;
 import utils.WebBrowserFactory;
-import web.pages.DuckduckgoHomePage;
-import web.pages.SearchPage;
-import web.pages.W3schoolsPage;
+import web.pages.w3schools.W3schoolsPage;
 
 public class TestCases {
 

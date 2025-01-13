@@ -1,4 +1,4 @@
-package web.pages;
+package web.pages.w3schools;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

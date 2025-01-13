@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import utils.ConfigReader;
 import utils.WebBrowserFactory;
-import web.pages.DuckduckgoHomePage;
+import web.pages.duckduckgo.DuckduckgoHomePage;
 
 public class BeforeMethodTest {
     //Driver initialization

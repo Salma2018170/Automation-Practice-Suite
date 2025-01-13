@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class WebElementActions {
-    private static WebDriver driver;
+    private  WebDriver driver;
     public WebElementActions(WebDriver driver) {
         this.driver=driver;
 
@@ -12,6 +12,7 @@ public class WebElementActions {
 
     //Get the title of the page
     public static String getTitle(WebDriver driver) {
+
         return driver.getTitle();
     }
     //Get the text of the element

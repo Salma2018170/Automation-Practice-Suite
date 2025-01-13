@@ -1,4 +1,4 @@
-package web.pages;
+package web.pages.duckduckgo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +16,9 @@ public class SearchPage {
     By seleniumDevLink = By.xpath("//a[@data-testid='result-extras-url-link' and @href='https://www.selenium.dev/documentation/webdriver/']");
 
     By fourthResultText=By.xpath("//li[@data-layout='organic'][4]//a[@data-testid='result-title-a']");
+    int index=2;
+    By secondResultText=By.xpath("//li[@data-layout='organic']["+index+"]//a[@data-testid='result-extras-url-link']");
+
     //constructor
 
     public SearchPage(WebDriver driver){
@@ -32,6 +35,12 @@ public class SearchPage {
 
     public  String getTextOfTheFourthResult ( ){
      return driver.findElement(fourthResultText).getText();
+    }
+
+    public  SearchPage assertOnCucumberTutorialSecondLink(String expectedResult){
+        String actualResult=driver.findElement(secondResultText).getText();
+        assertEquals(actualResult,expectedResult);
+        return this;
     }
 
 

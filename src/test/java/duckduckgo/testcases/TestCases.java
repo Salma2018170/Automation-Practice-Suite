@@ -2,17 +2,14 @@ package duckduckgo.testcases;
 
 import jdk.jfr.Description;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.ConfigReader;
 import utils.WebBrowserFactory;
-import web.pages.DuckduckgoHomePage;
-import web.pages.SearchPage;
-
-import java.time.Duration;
+import web.pages.duckduckgo.DuckduckgoHomePage;
+import web.pages.duckduckgo.SearchPage;
 
 import static java.lang.Thread.sleep;
 
@@ -99,16 +96,28 @@ public class TestCases {
 
     }
 
+    /**
+     * Open Google Chrome
+     * Navigate to [https://duckduckgo.com/]
+     * Search for [Cucumber IO]
+     * Navigate to the second results page
+     * Assert that the link of the second result contains [https://www.linkedin.com]
+     * Close Google Chrome
+     */
+    @Test
+    public void searchForCucumber() {
+        new DuckduckgoHomePage(driver).navigateToDuckduckgoHomePage()
+                .setSearchBox("Cucumber IO")
+                .clickOnSearchIcon().assertOnCucumberTutorialSecondLink("https://www.linkedin.com");
+    }
 
     @BeforeMethod
-    public void  setup() {
+    public void setup() {
 
         //browser initialization
         ConfigReader.loadProperties();
         driver= WebBrowserFactory.getDriver();
-        //driver=new ChromeDriver();
-        //driver.get("https://duckduckgo.com/");
-        driver.navigate().to(url);
+       // driver.navigate().to(url);
        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         //Pages initialization
         duckduckgoHomePage =new DuckduckgoHomePage(driver);

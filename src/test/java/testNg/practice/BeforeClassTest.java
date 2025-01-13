@@ -3,12 +3,11 @@ package testNg.practice;
 import jdk.jfr.Description;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utils.ConfigReader;
 import utils.WebBrowserFactory;
-import web.pages.DuckduckgoHomePage;
+import web.pages.duckduckgo.DuckduckgoHomePage;
 
 public class BeforeClassTest {
   //Driver initialization
