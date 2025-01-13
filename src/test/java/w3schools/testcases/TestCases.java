@@ -20,6 +20,14 @@ public class TestCases {
 
     //Pages initialization
      private W3schoolsPage w3schoolsPage;
+
+    @Description("assert for company Task7")
+    @Test
+    public void assertForTheCountryTask7(){
+        String strCountryName=w3schoolsPage.getCountryName();
+        Assert.assertEquals(strCountryName,"Austria");
+
+    }
     @BeforeMethod
     public void  setup() {
 
@@ -28,7 +36,7 @@ public class TestCases {
         driver= WebBrowserFactory.getDriver();
         // ChromeDriver driver=new ChromeDriver();
         //driver.get("https://duckduckgo.com/");
-       // driver.manage().
+        // driver.manage().
         driver.navigate().to(url);
 
         //Pages implementation
@@ -36,14 +44,6 @@ public class TestCases {
 
 
     }
-    @Description("assert for company Task7")
-    @Test
-    public void assertForTheCountryTask7(){
-        String strCountryName=w3schoolsPage.getCountryName();
-        Assert.assertEquals(strCountryName,"Austria");
-
-    }
-
     @AfterMethod
     public void tearDown(){
         driver.quit();
