@@ -9,9 +9,14 @@ import utils.WebBrowserFactory;
 import web.pages.theinternetherokuapp.TheInternetHomePage;
 import web.pages.w3schools.W3schoolsPage;
 
+import java.io.File;
+
 public class TestCases {
     //driver initialization
     private WebDriver driver;
+
+    //upload a small image path
+    File file = new File("src/test/resources/img-data/testUploadFiled.png");
 
     /**
      * ________________ Basic ________________
@@ -29,6 +34,25 @@ public class TestCases {
                 .goToCheckBoxesPage()
                 .checkCheckBox1().assertCheckBoxsIsChecked();
     }
+    /**
+     ________________ Moderate ________________
+     Open Google Chrome
+     Navigate to [http://the-internet.herokuapp.com/upload]
+     Upload a small image file
+     Assert that the file was uploaded successfully
+     Close Google Chrome
+     */
+    @Test
+    public void validateFileUpload() {
+        //driver initialization
+        new TheInternetHomePage(driver)
+                .navigateToTheInternetHome()
+                .goToFileUploadPage()
+                .uploadFileImage(file.getAbsolutePath())
+                .assertFileUploadSuccess("testUploadFiled.png");
+
+    }
+
     @BeforeMethod
     public void  setup() {
 
