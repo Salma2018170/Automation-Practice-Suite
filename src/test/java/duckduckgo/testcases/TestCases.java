@@ -11,6 +11,9 @@ import utils.WebBrowserFactory;
 import web.pages.duckduckgo.DuckduckgoHomePage;
 import web.pages.duckduckgo.SearchPage;
 
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+
 import static java.lang.Thread.sleep;
 
 public class TestCases {
@@ -112,7 +115,7 @@ public class TestCases {
     }
 
     @BeforeMethod
-    public void setup() {
+    public void setup() throws MalformedURLException, URISyntaxException {
 
         //browser initialization
         ConfigReader.loadProperties();

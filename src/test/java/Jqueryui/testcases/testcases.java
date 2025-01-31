@@ -8,6 +8,9 @@ import utils.ConfigReader;
 import utils.WebBrowserFactory;
 import web.pages.jqueryui.JqueryuiPage;
 
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+
 public class testcases {
     //driver initialization
     private WebDriver driver;
@@ -29,7 +32,7 @@ public class testcases {
                 .assertDragAndDropSuccess();
     }
     @BeforeMethod
-    public void  setup() {
+    public void  setup() throws MalformedURLException, URISyntaxException {
 
         //browser initialization
         ConfigReader.loadProperties();

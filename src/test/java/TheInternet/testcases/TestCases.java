@@ -10,6 +10,8 @@ import web.pages.theinternetherokuapp.TheInternetHomePage;
 import web.pages.w3schools.W3schoolsPage;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
 
 public class TestCases {
     //driver initialization
@@ -54,7 +56,7 @@ public class TestCases {
     }
 
     @BeforeMethod
-    public void  setup() {
+    public void  setup() throws MalformedURLException, URISyntaxException {
 
         //browser initialization
         ConfigReader.loadProperties();

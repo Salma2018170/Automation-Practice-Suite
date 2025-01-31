@@ -29,6 +29,10 @@ public class W3schoolsPage {
     //td[text()='Ernst Handel']/parent::tr/td[3]
     */
     By countryInTheTableText=By.xpath("//tr[contains(.,'Ernst Handel')]/td[3]");
+
+    //URL initialization
+    String url="https://www.w3schools.com/html/html_tables.asp";
+
     // Constructor
     public W3schoolsPage(WebDriver driver){
            this.driver=driver;

@@ -7,13 +7,16 @@ import utils.ConfigReader;
 import utils.WebBrowserFactory;
 import web.pages.duckduckgo.DuckduckgoHomePage;
 
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+
 public class BeforeMethodTest {
     //Driver initialization
     WebDriver driver;
     // Pages initialization
     DuckduckgoHomePage duckduckgoHomePage;
     @BeforeMethod
-    public void  setup() {
+    public void  setup() throws MalformedURLException, URISyntaxException {
 
         //browser initialization
         ConfigReader.loadProperties();
@@ -39,7 +42,7 @@ public class BeforeMethodTest {
 
     }
     @AfterMethod
-    public void  tearDown() {
+    public void  tearDown() throws MalformedURLException, URISyntaxException {
 
         //browser initialization
         ConfigReader.loadProperties();
