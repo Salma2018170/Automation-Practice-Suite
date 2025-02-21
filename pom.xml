@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- Dependency Versions -->
-        <selenium.version>4.28.1</selenium.version>
+        <selenium.version>4.29.0</selenium.version>
         <testng.version>7.10.2</testng.version>
         <yaml.version>2.3</yaml.version>
     </properties>
