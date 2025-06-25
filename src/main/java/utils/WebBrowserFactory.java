@@ -31,7 +31,8 @@ public class WebBrowserFactory {
         else if("Remote".equalsIgnoreCase(browser)){
             //RemoteWebDriver
             ChromeOptions options = new ChromeOptions();
-            driver =new RemoteWebDriver(new URI("http://localhost:4444").toURL(), options );
+
+            driver =new RemoteWebDriver(new URI("http://192.168.1.32:5555").toURL(), options );
         }
         else {
             throw new IllegalArgumentException("Unsupported browser: " + browser);
