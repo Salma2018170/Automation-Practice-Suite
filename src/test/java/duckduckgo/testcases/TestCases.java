@@ -1,6 +1,7 @@
 package duckduckgo.testcases;
 
 import jdk.jfr.Description;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -128,9 +129,20 @@ public class TestCases {
 
     }
 
+
+    @Test
+    public void actionsUnderstanding() throws InterruptedException {
+     driver.findElement(By.id("salma")).submit();
+     driver.findElement(By.id("salma")).click();
+        driver.findElement(By.id("salma")).getAttribute("value");
+        driver.findElement(By.id("salma")).getDomAttribute("");
+        driver.findElement(By.id("salma")).getDomProperty("");
+
+    }
     @AfterMethod
     public void tearDown(){
 
         driver.quit();
+
     }
 }

@@ -38,6 +38,11 @@
         <artifactId>snakeyaml</artifactId>
         <version>${yaml.version}</version>
     </dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-api</artifactId>
+        <version>4.35.0</version>
+    </dependency>
 
 </dependencies>
 </project>

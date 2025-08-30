@@ -9,7 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org. testng.Assert.assertEquals;
 
 import java.time.Duration;
 
@@ -42,7 +42,6 @@ public class WaitingStrategies {
         driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/selenium/web/dynamic.html");
         driver.manage().window().maximize();
-
     }
 
 
@@ -54,7 +53,15 @@ public class WaitingStrategies {
         System.out.println("Background color: " + backgroundColor);
         String expectedColor = "rgba(255, 0, 0, 1)";
         assertEquals(backgroundColor, expectedColor);
-
+/// /////////////////////////////////////
+      String  getDomAttribute=  driver.findElement(box).getDomAttribute("style");
+        System.out.println("getDomAttribute: " + getDomAttribute);
+        /// ///
+        String  getDomProperty=  driver.findElement(box).getDomProperty("style");
+        System.out.println("getDomAttribute: " + getDomAttribute);
+        /// ///
+        String  getAttribute=  driver.findElement(box).getAttribute("style");
+        System.out.println("getDomAttribute: " + getDomAttribute);
 
     }
 
@@ -67,6 +74,16 @@ public class WaitingStrategies {
         System.out.println("Background color: " + backgroundColor);
         String expectedColor = "rgba(255, 0, 0, 1)";
         assertEquals(backgroundColor, expectedColor);
+
+        String  getDomAttribute=  driver.findElement(box).getDomAttribute("color");
+        System.out.println("getDomAttribute: " + getDomAttribute);
+        /// ///
+        String  getDomProperty=  driver.findElement(box).getDomProperty("color");
+        System.out.println("getDomProperty: " + getDomProperty);
+        /// ///
+        String  getAttribute=  driver.findElement(box).getAttribute("color");
+        System.out.println("getAttribute: " + getAttribute);
+
 
     }
     //passed test
@@ -92,9 +109,10 @@ public class WaitingStrategies {
          wait =
                 new FluentWait<>(driver)
                         .withTimeout(DURATION)
-                        .pollingEvery(Duration.ofMillis(300)) //kol 2day hro7 abos 3la browser
+                        .pollingEvery(Duration.ofMillis(300)) //kol 2dayh hro7 abos 3la browser
                         .ignoring(NoSuchElementException.class)
-                        .ignoring(ElementNotInteractableException.class);
+                        .ignoring(ElementNotInteractableException.class)
+                        .ignoring(StaleElementReferenceException.class);
 
         wait.until(
                 d -> {
@@ -118,6 +136,26 @@ public class WaitingStrategies {
         WebElement element=driver.findElement(addBoxButton);
         element.click();
 
+
+
+    }
+
+    //Passed test
+    @Test
+    public void practiceTest() {
+        driver.manage().timeouts().implicitlyWait(DURATION);
+        // addtextbox
+        By boxText=By.id("revealed");
+        driver.findElement(By.id("reveal")).click();
+
+        String  getDomAttribute=  driver.findElement(boxText).getDomAttribute("style");
+        System.out.println("getDomAttribute: " + getDomAttribute);
+        /// ///
+        String  getDomProperty=  driver.findElement(boxText).getDomProperty("color");
+        System.out.println("getDomProperty: " + getDomProperty);
+        /// ///
+        String  getAttribute=  driver.findElement(boxText).getAttribute("color");
+        System.out.println("getAttribute: " + getAttribute);
 
 
     }
