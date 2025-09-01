@@ -17,7 +17,7 @@
         <!-- Dependency Versions -->
         <selenium.version>4.35.0</selenium.version>
         <testng.version>7.11.0</testng.version>
-        <yaml.version>2.4</yaml.version>
+        <yaml.version>2.5</yaml.version>
     </properties>
 <dependencies>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
