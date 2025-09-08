@@ -146,17 +146,27 @@ public class WaitingStrategies {
         driver.manage().timeouts().implicitlyWait(DURATION);
         // addtextbox
         By boxText=By.id("revealed");
+//        // Before click
+//        /// //// dom attribute
+//        String  getDomAttributeAfter=  driver.findElement(boxText).getDomAttribute("style");
+//        System.out.println("getDomAttributeAfter: " + getDomAttributeAfter);
+//        /// /// dom property
+//        String  getDomPropertyAfter=  driver.findElement(boxText).getDomProperty("color");
+//        System.out.println("getDomPropertyAfter: " + getDomPropertyAfter);
+//        /// /// attribute
+//        String  getAttributeAfter=  driver.findElement(boxText).getAttribute("color");
+//        System.out.println("getAttributeAfter: " + getAttributeAfter);
+        //after click
         driver.findElement(By.id("reveal")).click();
-
+        /// //// dom attribute
         String  getDomAttribute=  driver.findElement(boxText).getDomAttribute("style");
         System.out.println("getDomAttribute: " + getDomAttribute);
-        /// ///
+        /// /// dom property
         String  getDomProperty=  driver.findElement(boxText).getDomProperty("color");
         System.out.println("getDomProperty: " + getDomProperty);
-        /// ///
+        /// /// attribute
         String  getAttribute=  driver.findElement(boxText).getAttribute("color");
         System.out.println("getAttribute: " + getAttribute);
-
 
     }
 
