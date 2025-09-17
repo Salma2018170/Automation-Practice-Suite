@@ -3,8 +3,8 @@ package testNg.practice;
 import jdk.jfr.Description;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import utils.ConfigReader;
-import utils.WebBrowserFactory;
+import engine.ConfigReader;
+import engine.WebBrowserFactory;
 import web.pages.duckduckgo.DuckduckgoHomePage;
 
 import java.net.MalformedURLException;

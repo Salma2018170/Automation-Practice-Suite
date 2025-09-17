@@ -6,8 +6,8 @@ import org. testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utils.ConfigReader;
-import utils.WebBrowserFactory;
+import engine.ConfigReader;
+import engine.WebBrowserFactory;
 import web.pages.w3schools.W3schoolsPage;
 
 import java.net.MalformedURLException;

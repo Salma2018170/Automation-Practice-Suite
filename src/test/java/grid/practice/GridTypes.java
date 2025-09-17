@@ -1,7 +1,6 @@
 package grid.practice;
 
 import jdk.jfr.Description;
-import org.openqa.selenium.DeviceRotation;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -9,14 +8,11 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utils.ConfigReader;
-import utils.WebBrowserFactory;
 import web.pages.w3schools.W3schoolsPage;
 
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.time.Duration;
 
 public class GridTypes {

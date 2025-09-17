@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import utils.ConfigReader;
-import utils.WebBrowserFactory;
+import engine.ConfigReader;
+import engine.WebBrowserFactory;
 import web.pages.duckduckgo.DuckduckgoHomePage;
 
 import java.net.MalformedURLException;

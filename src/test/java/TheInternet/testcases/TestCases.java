@@ -4,10 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utils.ConfigReader;
-import utils.WebBrowserFactory;
+import engine.ConfigReader;
+import engine.WebBrowserFactory;
 import web.pages.theinternetherokuapp.TheInternetHomePage;
-import web.pages.w3schools.W3schoolsPage;
 
 import java.io.File;
 import java.net.MalformedURLException;
