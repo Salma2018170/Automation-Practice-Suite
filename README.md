@@ -21,10 +21,14 @@ It follows industry **best practices** and modern **design patterns** while usin
 - **Test Framework**: TestNG  
 - **Automation Tool**: Selenium WebDriver  
 - **Design Pattern**: Page Object Model (POM)  
-- **Data Management**: Data-driven test scenarios  
 - **Execution Environment**: Browser resolution `1024x768px`  
 
 ---
 
 ## 📂 Project Structure  
-
+Automation-Practice-Suite/
+├── src/
+│ ├── main/java/pom/ # Page Object classes
+│ └── test/java/tests/ # TestNG test scenarios (TCs)
+├── pom.xml # Maven dependencies & build
+└── README.md
