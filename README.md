@@ -26,9 +26,12 @@ It follows industry **best practices** and modern **design patterns** while usin
 ---
 
 ## 📂 Project Structure  
+
+```bash
 Automation-Practice-Suite/
 ├── src/
-│ ├── main/java/pom/ # Page Object classes
-│ └── test/java/tests/ # TestNG test scenarios (TCs)
-├── pom.xml # Maven dependencies & build
-└── README.md
+│   ├── main/java/web.pages/     # Page Object classes
+│   ├── main/java/engin/         # Setup and Bot Pattern implementation
+│   └── test/java/tests/         # TestNG test scenarios (TCs)
+├── pom.xml                      # Maven dependencies & build
+└── README.md                    # Project documentation
