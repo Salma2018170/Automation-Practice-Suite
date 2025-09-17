@@ -9,7 +9,7 @@ It follows industry **best practices** and modern **design patterns** while usin
 
 - Practice and demonstrate automation testing concepts.  
 - Apply **Selenium + Java + TestNG** in a structured framework.  
-- Highlight **Page Object Model (POM)**, **data-driven testing**, and **coding best practices**.  
+- Highlight **Page Object Model (POM)**, **Bot Pattern**,**fluent design** , and **coding best practices**.  
 - Serve as a reference project for future improvements in automation frameworks.  
 
 ---
