@@ -2,7 +2,7 @@ package web.pages.duckduckgo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import engine.WebElementActions;
+import engine.ActionBot;
 
 import static org.testng.Assert.assertEquals;
 
@@ -30,7 +30,7 @@ public class SearchPage {
     //Validations on the page
     public  void assertOnSeleniumDevFirstLink(String expectedResult){
         System.out.println("The first link is: "+driver.findElement(seleniumDevLink).getText());
-        assertEquals(WebElementActions.getElementText(driver,seleniumDevLink),expectedResult);
+        assertEquals(ActionBot.getElementText(driver,seleniumDevLink),expectedResult);
     }
 
     public  String getTextOfTheFourthResult ( ){

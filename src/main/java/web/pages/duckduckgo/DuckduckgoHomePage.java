@@ -1,8 +1,8 @@
 package web.pages.duckduckgo;
 
+import engine.ActionBot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import engine.WebElementActions;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -37,17 +37,17 @@ public class DuckduckgoHomePage {
         return this;
     }
     public DuckduckgoHomePage setSearchBox(String searchKey){
-        WebElementActions.type(driver,searchBox,searchKey);
-      //  WebElementActions.click(driver,searchButtonIcon);
+        ActionBot.type(driver,searchBox,searchKey);
+      //  ActionBot.click(driver,searchButtonIcon);
         return this;
     }
     public SearchPage clickOnSearchIcon(){
-        WebElementActions.click(driver,searchButtonIcon);
+        ActionBot.click(driver,searchButtonIcon);
         return new SearchPage(driver);
     }
 //Validations on the page
     public void assertOnGoogleTitle(String expectedTitle){
-        assertEquals(WebElementActions.getTitle(driver),expectedTitle);
+        assertEquals(ActionBot.getTitle(driver),expectedTitle);
     }
     public void assertOnDuckduckgoPageLogo(){
 
@@ -56,7 +56,7 @@ public class DuckduckgoHomePage {
 
     public  void assertOnTestNGTutorial(String expectedResult){
         System.out.println("The fourth link is: "+driver.findElement(testNGTutorialText).getText());
-        //assertEquals(WebElementActions.getElementText(driver,testNGTutorialText),expectedResult);
+        //assertEquals(ActionBot.getElementText(driver,testNGTutorialText),expectedResult);
     }
 
 }

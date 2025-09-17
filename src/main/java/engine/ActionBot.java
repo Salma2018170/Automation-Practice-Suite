@@ -3,9 +3,11 @@ package engine;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class WebElementActions {
-    private  WebDriver driver;
-    public WebElementActions(WebDriver driver) {
+public class ActionBot {
+    private  final WebDriver driver;
+
+    // Constructor
+    public ActionBot(WebDriver driver) {
         this.driver=driver;
 
     }
