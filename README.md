@@ -1,4 +1,7 @@
 # 🧪 Automation Practice Suite  
+**Note:** This repository is intended for practice and learning purposes. Please keep this in mind while exploring and experimenting.
+
+---
 
 This repository contains an **automation testing project from scratch** designed to showcase my skills in building a maintainable and scalable test automation framework.  
 It follows industry **best practices** and modern **design patterns** while using widely adopted tools and technologies.  
