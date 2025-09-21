@@ -9,7 +9,7 @@ import static org.testng.Assert.assertTrue;
 
 public class DuckduckgoHomePage {
     WebDriver driver;
-
+    private ActionBot actionBot;
     // URL
 
     private String url="https://duckduckgo.com/";
@@ -29,6 +29,7 @@ public class DuckduckgoHomePage {
     //constructor
     public DuckduckgoHomePage(WebDriver driver){
         this.driver=driver;
+
     }
     //Actions on the page
 
@@ -37,12 +38,12 @@ public class DuckduckgoHomePage {
         return this;
     }
     public DuckduckgoHomePage setSearchBox(String searchKey){
-        ActionBot.type(driver,searchBox,searchKey);
+        actionBot.type(searchBox,searchKey);
       //  ActionBot.click(driver,searchButtonIcon);
         return this;
     }
     public SearchPage clickOnSearchIcon(){
-        ActionBot.click(driver,searchButtonIcon);
+        actionBot.click(searchButtonIcon);
         return new SearchPage(driver);
     }
 //Validations on the page
