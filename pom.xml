@@ -18,7 +18,7 @@
         <selenium.version>4.35.0</selenium.version>
         <testng.version>7.11.0</testng.version>
         <yaml.version>2.5</yaml.version>
-        <allure.version>2.29.0</allure.version>
+        <allure.version>2.30.0</allure.version>
         <aspectj.version>1.9.22</aspectj.version>
         <log4j.version>2.25.1</log4j.version>
     </properties>
