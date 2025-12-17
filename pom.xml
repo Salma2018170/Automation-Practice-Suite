@@ -20,7 +20,7 @@
         <yaml.version>2.5</yaml.version>
         <allure.version>2.30.0</allure.version>
         <aspectj.version>1.9.25</aspectj.version>
-        <log4j.version>2.25.2</log4j.version>
+        <log4j.version>2.25.3</log4j.version>
     </properties>
 
     <dependencyManagement>
