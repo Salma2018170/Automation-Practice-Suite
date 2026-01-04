@@ -11,5 +11,11 @@ jobs:
     steps: 
       - name: print welcome message
         run: echo "Welcome to ur first push."
+
+      - name: Checkout repo
+        uses: actions/checkout@v6.0.1
+
+      - name: list file name
+        run: ls -la
         
     
