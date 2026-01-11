@@ -19,7 +19,7 @@
         <testng.version>7.11.0</testng.version>
         <yaml.version>2.5</yaml.version>
         <allure.version>2.32.0</allure.version>
-        <aspectj.version>1.9.25</aspectj.version>
+        <aspectj.version>1.9.25.1</aspectj.version>
         <log4j.version>2.25.3</log4j.version>
     </properties>
 
